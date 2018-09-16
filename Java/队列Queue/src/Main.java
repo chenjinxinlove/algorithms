@@ -20,7 +20,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int opCount = 10000000;
+        int opCount = 100000;
 
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue, opCount);
