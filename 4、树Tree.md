@@ -50,3 +50,10 @@ class Node {
 
 - 前中后序遍历和借助栈的非递归遍历（深度遍历）
 - 层级遍历（广度遍历）就是一层一层的展示借助队列实现
+- 广度优先遍历的意义----更快的找到问题的解，常用于算法的设计中-最短路径
+
+删除一个节点
+
+![image](https://zky.koocdn.com/club/picture/61ec0508751d4db79db3cfffcac8fe38.png)
+![image](https://zky.koocdn.com/club/picture/ec4b9873e30c41f2bcd86b1a664d7bad.png)
+![image](https://zky.koocdn.com/club/picture/392962c220a04ceaaa32eaf6fc7b64af.jpg)
