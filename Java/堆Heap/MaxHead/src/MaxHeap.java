@@ -8,6 +8,10 @@ public class MaxHeap<E extends Comparable<E>> {
     public MaxHeap(){
         data = new Array<>();
     }
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+
+    }
 
     public int size() {
         return data.getSize();
