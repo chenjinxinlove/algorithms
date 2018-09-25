@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Merger {
+public interface Merger<E> {
+    E merger(E a, E b);
 }

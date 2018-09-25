@@ -57,3 +57,27 @@ class Node {
 ![image](https://zky.koocdn.com/club/picture/61ec0508751d4db79db3cfffcac8fe38.png)
 ![image](https://zky.koocdn.com/club/picture/ec4b9873e30c41f2bcd86b1a664d7bad.png)
 ![image](https://zky.koocdn.com/club/picture/392962c220a04ceaaa32eaf6fc7b64af.jpg)
+
+## [线段树](segment-tree) - with min/max/sum range queries examples
+
+#### 最经典的线段树问题：区间染色
+
+- m次操作后，我们可以看见多少种颜色
+- m次操作后，我们可以在【i，j]区间内看见多少种颜色？
+
+- 染色操作（更新区间） 数组实现  O(n)
+- 查询操作（查询区间） 数组实现  O(n)
+
+
+#### 区间查询
+
+- 查询一个区间[i, j]的统计查询？
+- 例子----2017年注册用户中消费最高的用户？消费最少的用户？学习时间最长的用户？
+- 使用线段树是O(logn)的复杂度
+
+#### 什么是线段树
+
+[线段树](https://zky.koocdn.com/club/picture/e36845cae84a49a6a8c40febc5127000.jpeg)
+
+不是完全二叉树但是是一个平衡二叉树 堆也是平衡二叉树
+
