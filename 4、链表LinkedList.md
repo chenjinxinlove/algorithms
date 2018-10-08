@@ -146,4 +146,21 @@ end ReverseTraversal
 O(n)
 
 
+## 常用操作
 
+- 单链表翻转
+  ```
+  let prev = null;
+  let cur = this.head;
+  let temp = null;
+  while(cur !== null) {
+    temp = cur.next;
+    cur.next = prev;
+    prev = cur;
+    cur = temp;
+  }
+  ```
+- 链表中环的检测
+- 两个有序的链表合并
+- 删除链表倒数第n个节点
+- 求链表的中间节点
