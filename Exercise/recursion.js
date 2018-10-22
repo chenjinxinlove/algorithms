@@ -7,13 +7,28 @@ function sum(n) {
     return sum(n - 1) + n;
 }
 console.log(sum(100));
-var addDigits = function (num) {
-    if (num < 9 && num > 0) {
-        return num;
+/**
+ * @param {number} num
+ * @return {number}
+ */
+// var addDigits1 = function(num) {
+// 	if (num < 9 && num > 0) {
+// 		return num
+//   }
+//   const total = Array.from(`${num}`, (value) => Number(value)).reduce((acc, item) => {
+//     return acc + item;
+//   },)
+// 	return addDigits(total);
+// }
+var addDigits = function name(num) {
+    var total = 0;
+    while (num) {
+        total += num % 10;
+        num = Math.floor(num / 10);
     }
-    var total = Array.from("" + num, function (value) { return Number(value); }).reduce(function (acc, item) {
-        return acc + item;
-    });
-    return addDigits(total);
+    if (total.toString().length > 1) {
+		return total && addDigits(total)
+    }
+    return total;
 };
-addDigits(23333);
+console.log(addDigits(38));
