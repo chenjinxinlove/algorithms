@@ -8,8 +8,9 @@ function sum(n) {
 }
 console.log(sum(100));
 /**
+ * LeeCode  256
  * @param {number} num
- * @return {number}
+ * @return {number}  
  */
 // var addDigits1 = function(num) {
 // 	if (num < 9 && num > 0) {
