@@ -32,3 +32,31 @@ var addDigits = function name(num) {
     return total;
 };
 console.log(addDigits(38));
+
+
+
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+
+var reverseList = function(head) {
+	var prev = null
+	var cur = head
+	var temp = null
+	while (cur !== null) {
+		temp = cur.next
+		cur.next = prev
+		prev = cur
+		cur = temp
+	}
+	return prev
+}
