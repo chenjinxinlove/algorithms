@@ -130,3 +130,39 @@ console.log('fibonacci_cache(%d) = %d, use time %dms.',
     50,
     result2,
     end2.getTime() - start2.getTime());
+
+    // 使用set来存储
+
+var hasCycle = function(head) {
+    const set = new Set();
+    if (head == null) {
+		return false;
+	}
+    while(head.next !== null) {
+        if(set.has(head)) {
+            return true;
+        } else {
+            set.add(head);
+        }
+        head = head.next;
+    }
+    return false;
+};
+
+// 使用快慢指针
+
+var hasCycle = function(head) {
+	if (head == null || head.next == null) {
+		return false
+	}
+	let slow = head
+	let fast = head.next
+	while (slow != fast) {
+		if (fast == null || fast.next == null) {
+			return false
+		}
+		slow = slow.next
+		fast = fast.next.next
+	}
+	return true
+}
