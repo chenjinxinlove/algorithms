@@ -166,3 +166,84 @@ var hasCycle = function(head) {
 	}
 	return true
 }
+
+var removeElements = function (head, val) {
+    while (head !== null && head.val === val) {
+        head = head.next;
+    }
+
+    if (head === null) {
+        return []
+    }
+    let cur = head;
+    while (cur.next !== null) {
+        if (cur.next.val === val) {
+            cur.next = cur.next.next
+        } else {
+            cur = cur.next;
+        }
+    }
+    return head;
+};
+
+var removeElements = function (head, val) {
+    let dummnyHead = new ListNode(0);
+    dummnyHead.next = head;
+    let cur = dummnyHead;
+    while (cur.next !== null) {
+        if (cur.next.val === val) {
+            cur.next = cur.next.next
+        } else {
+            cur = cur.next;
+        }
+    }
+    if (dummnyHead.next === null) {
+        return []
+    } else {
+        return dummnyHead.next
+    }
+};
+
+var swapPairs = function (head) {
+    var dummyHead = new ListNode(0);
+    dummyHead.next = head;
+    p = dummyHead;
+    while (p.next && p.next.next) {
+        var node1 = p.next;
+        var node2 = p.next.next;
+        var next = node2.next;
+        // 交换  画图
+        node2.next = node1;
+        node1.next = next;
+        p.next = node2;
+
+        p = node1
+    }
+    if (dummyHead.next === null) {
+        return []
+    } else {
+        return dummyHead.next;
+    }
+
+};
+
+var removeNthFromEnd = function (head, n) {
+    var dummyHead = new ListNode(0);
+    dummyHead.next = head;
+    var p = dummyHead;
+    var q = dummyHead;
+    for (var i = 0; i < n + 1; i++) {
+        q = q.next;
+    }
+    while (q !== null) {
+        p = p.next;
+        q = q.next;
+    }
+    p.next = p.next.next;
+    if (dummyHead.next === null) {
+        return []
+    } else {
+        return dummyHead.next
+    }
+
+};
