@@ -20,3 +20,26 @@ var intersect = function(nums1, nums2) {
 };
 
 intersect([1,2,3,4,4,1], [1,2,4,4])
+
+
+
+
+var lengthOfLongestSubstring = function(s) {
+    let r = -1;
+    let l = 1;
+    let res = 0;
+    let freq = Array(256).fill(0);
+    while(l < s.length) {
+        if (r + 1 < s.length && freq[s[r+1]] == 0) {
+            r++;
+            freq[s[r]]++;
+        } else {
+            freq[s[l]]--;
+            l++;
+        }
+        res = Math.max(res, r-l+1);
+    }
+    return res;
+};
+
+lengthOfLongestSubstring('abcabcbb')
