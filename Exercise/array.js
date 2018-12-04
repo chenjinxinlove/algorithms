@@ -24,7 +24,6 @@ intersect([1,2,3,4,4,1], [1,2,4,4])
 
 
 
-<<<<<<< HEAD
 var minSubArrayLen = function(s, nums) {
 	let l = 0
 	let r = -1 // 滑动窗口 nums[i...j]
@@ -49,7 +48,7 @@ var minSubArrayLen = function(s, nums) {
 	return res
 }
 minSubArrayLen(7, [2, 3, 1, 2, 4, 3])
-=======
+
 var lengthOfLongestSubstring = function(s) {
     let r = -1;
     let l = 1;
@@ -69,4 +68,3 @@ var lengthOfLongestSubstring = function(s) {
 };
 
 lengthOfLongestSubstring('abcabcbb')
->>>>>>> 19e4f3945d9622c5107d223b41b78b348dcb935a
